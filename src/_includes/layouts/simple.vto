@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title }} - mono-markdown demo</title>
+  <link rel="stylesheet" href="/simple.css">
+</head>
+<body>
+  <main>
+    <h1>Titre H1</h1>
+    <p>Paragraphe avec un <a href="#">lien</a> et du <code>code</code> inline.</p>
+
+    {{ content }}
+
+    <h2>Liste</h2>
+    <ul>
+      <li>Élément A</li>
+      <li>Élément B</li>
+    </ul>
+
+    <h2>Callouts</h2>
+
+    <blockquote data-callout="note">
+      <p><strong>Note.</strong> Texte très sobre, monospace, aligné à gauche.</p>
+    </blockquote>
+
+    <div class="callout info">
+      <p><strong>Info.</strong> Variante via classe.</p>
+    </div>
+
+    <div class="callout" data-callout="warning">
+      <p><strong>Warning.</strong> Attention au minimalisme excessif 👀</p>
+    </div>
+
+    <details class="callout" data-callout="tip">
+      <summary><strong>Tip.</strong> Cliquer pour voir le détail</summary>
+      <p>Contenu repliable, toujours en monospace.</p>
+    </details>
+
+    <div class="callout success">
+      <p><strong>Success.</strong> Action réussie.</p>
+    </div>
+
+    <div class="callout danger">
+      <p><strong>Danger.</strong> Erreur critique.</p>
+    </div>
+
+    <h2>Code bloc</h2>
+    <pre><code>const msg = "sobre & propre";
+console.log(msg);</code></pre>
+
+    <h2>Table</h2>
+    <table>
+      <thead><tr><th>Col</th><th>Valeur</th></tr></thead>
+      <tbody><tr><td>A</td><td>1</td></tr><tr><td>B</td><td>2</td></tr></tbody>
+    </table>
+  </main>
+</body>
+</html>

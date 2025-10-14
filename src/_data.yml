@@ -1,2 +1,9 @@
-layout: layouts/base.vto
-templateEngine: [vto, md]
+lang: en
+
+metas:
+  site: petri.pro
+  twitter: ""
+  fediverse: ""
+  icon: /uploads/favicon.svg
+  lang: =lang
+  generator: true

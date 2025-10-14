@@ -1,0 +1,149 @@
+/* =========================================================
+   mono-markdown.css — style minimal, monospace, GFM-friendly
+   - texte aligné gauche, pas de fioritures
+   - support callouts: [data-callout], .callout, details.callout
+   ========================================================= */
+
+:root{
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --bg: #fff;
+  --fg: #111;
+  --muted: #666;
+  --border: #ddd;
+  --code-bg: #f5f5f5;
+
+  /* Callout tones (light) */
+  --note:    #eef2ff; /* indigo-50 */
+  --info:    #e6f4ff; /* blue-50  */
+  --tip:     #ecfdf5; /* emerald-50 */
+  --success: #edf7ed; /* green-50 */
+  --warning: #fff7e6; /* amber-50 */
+  --danger:  #fff1f2; /* rose-50 */
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0d0f12;
+    --fg: #e7e9ed;
+    --muted: #9aa1ad;
+    --border: #222933;
+    --code-bg: #151a21;
+
+    --note:    #1b2140;
+    --info:    #0f2540;
+    --tip:     #0f2a22;
+    --success: #0f2816;
+    --warning: #2a2310;
+    --danger:  #2a1517;
+  }
+}
+
+/* Base typographie & conteneur */
+html, body{ margin:0; padding:0; }
+body{
+  font: 15px/1.6 var(--font-mono);
+  color: var(--fg);
+  background: var(--bg);
+  text-align: left;
+}
+main, article, section{
+  max-width: 80ch;
+  padding: 2rem 1rem;
+  margin-inline: auto;
+}
+
+/* Éléments GFM courants (sans décor) */
+h1, h2, h3, h4, h5, h6{
+  font-weight: 700;
+  margin: 1.6rem 0 .8rem;
+}
+h1{ font-size: 1.6rem; padding-bottom:.25rem; border-bottom:1px solid var(--border); }
+h2{ font-size: 1.3rem; }
+h3{ font-size: 1.1rem; }
+h4, h5, h6{ font-size: 1rem; }
+
+p, ul, ol, pre, blockquote, table{ margin: .9rem 0; }
+ul, ol{ padding-left: 1.25rem; }
+li + li{ margin-top: .2rem; }
+
+a{ color: inherit; text-decoration: underline; }
+a:hover{ text-decoration-thickness: 2px; }
+
+code{
+  background: var(--code-bg);
+  padding: .05em .3em;
+  border-radius: 3px;
+}
+pre{
+  background: var(--code-bg);
+  padding: .8rem;
+  border-radius: 4px;
+  overflow: auto;
+}
+pre code{ background: transparent; padding: 0; }
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+}
+th, td{
+  border: 1px solid var(--border);
+  padding: .5rem .6rem;
+  text-align: left;
+}
+thead th{ font-weight: 700; }
+
+/* Séparateur & images */
+hr{ border:0; border-top:1px solid var(--border); margin: 1.6rem 0; }
+img{ max-width: 100%; height: auto; display: block; margin: .8rem 0; }
+
+/* Focus visible (sobre) */
+:focus-visible{ outline: 2px solid var(--muted); outline-offset: 2px; }
+
+/* ---------------------------------------------------------
+   CALLOUTS minimalistes
+   Utilisation possible :
+   - <blockquote data-callout="note">...</blockquote>
+   - <div class="callout" data-callout="warning">...</div>
+   - <details class="callout" data-callout="tip"><summary>…</summary>…</details>
+   --------------------------------------------------------- */
+
+[data-callout], .callout{
+  border: 1px solid var(--border);
+  border-left-width: 4px;
+  padding: .75rem 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  background: transparent;
+}
+[data-callout] > :first-child,
+.callout > :first-child{
+  margin-top: 0;
+}
+[data-callout] > :last-child,
+.callout > :last-child{
+  margin-bottom: 0;
+}
+
+/* Tonalité par type */
+[data-callout="note"],    .callout.note    { background: var(--note);    }
+[data-callout="info"],    .callout.info    { background: var(--info);    }
+[data-callout="tip"],     .callout.tip     { background: var(--tip);     }
+[data-callout="success"], .callout.success { background: var(--success); }
+[data-callout="warning"], .callout.warning { background: var(--warning); }
+[data-callout="danger"],  .callout.danger  { background: var(--danger);  }
+
+/* Variante <details> */
+details.callout{ padding: 0; }
+details.callout > summary{
+  padding: .6rem .9rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+details.callout > summary::-webkit-details-marker{ display:none; }
+details.callout[open] > *:not(summary){
+  padding: .6rem .9rem .9rem;
+  border-top: 1px solid var(--border);
+}

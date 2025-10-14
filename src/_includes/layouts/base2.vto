@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr" data-theme="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="nice.css">
+  <script>
+    // Mini toggle thème (light/dark/system) – facultatif
+    document.addEventListener('DOMContentLoaded', () => {
+      const html = document.documentElement;
+      const btn = document.getElementById('theme-toggle');
+      const cycle = { "": "dark", "dark": "light", "light": "" };
+      const label = () => btn.textContent =
+        html.dataset.theme === "dark" ? "Thème: sombre"
+      : html.dataset.theme === "light" ? "Thème: clair"
+      : "Thème: système";
+      btn.addEventListener('click', () => { html.dataset.theme = cycle[html.dataset.theme||""]; label(); });
+      label();
+    });
+  </script>
+  <style>
+    /* Optionnel : forcer le color-scheme selon data-theme (sans écraser le reste) */
+    html[data-theme="light"] { color-scheme: light; }
+    html[data-theme="dark"]  { color-scheme: dark; }
+  </style>
+</head>
+<body>
+  <!-- Skip link -->
+  <a class="sr-only focus:not-sr-only" href="#main">Aller au contenu</a>
+
+  <header class="stack">
+    <nav>
+      <ul>
+        <li><a href="#typography">Typo</a></li>
+        <li><a href="#tables">Table</a></li>
+        <li><a href="#forms">Formulaires</a></li>
+        <li><a href="#components">Composants natifs</a></li>
+      </ul>
+    </nav>
+    <h1>HTML brut… mais soigné ✨</h1>
+    <p><small>Dark mode auto, focus visibles, OKLCH, `details`, `dialog`, alerts sémantiques, etc.</small></p>
+    <p><button id="theme-toggle" type="button" aria-label="Basculer le thème"></button></p>
+  </header>
+
+  <main id="main" class="stack" style="max-width:var(--prose-measure)">
+
+  {{ content }}
+
+    <section id="typography" class="stack">
+      <h2>Typographie & liens</h2>
+      <p>Voici un paragraphe avec un <a href="#ancre-demo">lien interne</a>, du texte <mark>mis en évidence</mark>, du <code>code</code>,
+        une abréviation <abbr title="Accessible Rich Internet Applications">ARIA</abbr> et une touche <kbd>CTRL</kbd>+<kbd>S</kbd>.</p>
+      <blockquote>Les styles par défaut doivent être lisibles, pas décoratifs.</blockquote>
+      <p id="ancre-demo"><strong>Section ciblée</strong> : cette ligne démontre l’état <code>:target</code>.</p>
+      <hr>
+    </section>
+
+    <section id="tables" class="stack">
+      <h2>Tableau (sticky head en conteneur étroit)</h2>
+      <div style="overflow:auto; container-type:inline-size; border:1px dashed var(--border); padding:.5rem;">
+        <table>
+          <thead>
+            <tr><th>Colonne</th><th>Valeur</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Version</td><td>v1.1</td><td>OKLCH + layers</td></tr>
+            <tr><td>Licence</td><td>MIT</td><td>Utilisation libre</td></tr>
+            <tr><td>Mesure</td><td>72ch</td><td>Prose agréable</td></tr>
+            <tr><td>Focus</td><td>visibles</td><td>Accessibilité</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="forms" class="stack">
+      <h2>Formulaire (validation native)</h2>
+      <form novalidate class="stack" onsubmit="this.checkValidity() || this.querySelector('input:invalid,textarea:invalid,select:invalid')?.focus(); return false;">
+        <fieldset class="stack">
+          <legend>Contact</legend>
+
+          <label for="email">Email (requis)</label>
+          <input id="email" type="email" placeholder="jean.dupont@example.com" required>
+
+          <label for="site">Site web (optionnel, URL valide)</label>
+          <input id="site" type="url" placeholder="https://exemple.org">
+
+          <label for="msg">Message (min 10 caractères)</label>
+          <textarea id="msg" rows="4" minlength="10" placeholder="Votre message"></textarea>
+
+          <label>Préférences</label>
+          <div>
+            <label><input type="checkbox" checked> Newsletter</label>
+            <label><input type="radio" name="c" checked> Option A</label>
+            <label><input type="radio" name="c"> Option B</label>
+          </div>
+
+          <p><button type="submit">Envoyer</button></p>
+        </fieldset>
+      </form>
+      <div role="alert" data-variant="info">Exemple d’alerte d’information accessible.</div>
+      <div role="alert" data-variant="success">Exemple d’alerte de succès.</div>
+      <div role="alert" data-variant="warning">Exemple d’alerte d’avertissement.</div>
+      <div role="alert">Exemple d’alerte d’erreur (par défaut).</div>
+    </section>
+
+    <section id="components" class="stack">
+      <h2>Composants HTML natifs</h2>
+
+      <details>
+        <summary>Un bloc <code>&lt;details&gt;</code> cliquable</summary>
+        <p>Pratique pour des FAQ, sections repliables, logs…</p>
+      </details>
+
+      <p>
+        <button type="button" onclick="document.getElementById('dlg').showModal()">Ouvrir le dialog</button>
+      </p>
+      <dialog id="dlg">
+        <form method="dialog" class="stack">
+          <h3>Bonjour 👋</h3>
+          <p>Je suis un <code>&lt;dialog&gt;</code> natif stylé.</p>
+          <menu>
+            <button value="cancel">Fermer</button>
+          </menu>
+        </form>
+      </dialog>
+
+      <article class="stack">
+        <h3>Une carte sémantique avec &lt;article&gt;</h3>
+        <p>Contenu de démonstration dans une carte neutre et élégante.</p>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="center">Fait avec ♥, des <abbr title="Feuilles de style en cascade">CSS</abbr> modernes et du HTML sémantique.</p>
+  </footer>
+</body>
+</html>

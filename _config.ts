@@ -1,12 +1,12 @@
 import lume from "lume/mod.ts";
+import plugins from "./plugins.ts";
 
 const site = lume({
   src: "./src",
-  server: {
-    open: false,
-  },
 });
 
-site.add("_includes/styles.css");
+site
+  .use(plugins())
+  .data("layout", "layouts/base.vto")
 
 export default site;

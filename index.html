@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Demo — Modern Default Styles</title>
+  <link rel="stylesheet" href="nice.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Un HTML brut… mais beau ✨</h1>
+    <p><small>Dark mode auto, focus visibles, typo soignée, tables/formulaires stylés.</small></p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Typo & liens</h2>
+      <p>Voici un paragraphe avec un <a href="#">lien</a>, du <code>code</code> inline
+      et une citation :</p>
+      <blockquote>Les styles par défaut doivent être lisibles, pas décoratifs.</blockquote>
+      <hr>
+    </section>
+
+    <section>
+      <h2>Tableau</h2>
+      <table>
+        <thead>
+          <tr><th>Colonne</th><th>Valeur</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Version</td><td>v1.0</td></tr>
+          <tr><td>Licence</td><td>MIT</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Formulaire</h2>
+      <form>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="jean.dupont@example.com">
+
+        <label for="msg">Message</label>
+        <textarea id="msg" rows="4" placeholder="Votre message"></textarea>
+
+        <p><button type="submit">Envoyer</button></p>
+      </form>
+    </section>
+
+    <section>
+      <h2>Code bloc</h2>
+      <pre><code>fetch('/api')
+  .then(r =&gt; r.json())
+  .then(console.log);</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Fait avec ♥ et du HTML sémantique.</p>
+  </footer>
+</body>
+</html>

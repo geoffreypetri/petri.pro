@@ -1,9 +1,9 @@
 {
   "imports": {
-    "lume/": "https://deno.land/x/lume@v3.0.6/",
+    "lume/": "https://deno.land/x/lume@v3.0.2/",
     "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@0.11.5/",
-    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.10/jsx-runtime.ts",
-    "lume_markdown_plugins/": "https://deno.land/x/lume_markdown_plugins@v0.9.0/"
+    "theme/": "../",
+    "lume/jsx-runtime": "https://deno.land/x/ssx@v0.1.10/jsx-runtime.ts"
   },
   "lock": false,
   "tasks": {
