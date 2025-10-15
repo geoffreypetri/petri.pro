@@ -1,9 +1,11 @@
 lang: en
+author: Geoffrey Petri
+mail: g@petri.pro
 
 metas:
   site: petri.pro
-  twitter: ""
-  fediverse: ""
   icon: /uploads/favicon.svg
   lang: =lang
   generator: true
+  robots: true
+  github: geoffreypetri

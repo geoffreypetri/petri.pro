@@ -1,0 +1,11 @@
+/* Alerts styles */
+
+div.markdown-alert > *::before {
+  content: "> ";
+} 
+div.markdown-alert > p {
+  margin: 0;
+}
+div.markdown-alert-note *::before {
+  color: green;
+}

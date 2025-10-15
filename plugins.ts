@@ -9,6 +9,10 @@ import { merge } from "lume/core/utils/object.ts";
 import pagefind from "lume/plugins/pagefind.ts";
 import multilanguage from "lume/plugins/multilanguage.ts";
 
+import { container } from "npm:@mdit/plugin-container";
+import { alert } from "npm:@mdit/plugin-alert";
+
+
 import "lume/types.ts";
 
 export interface Options {
@@ -81,5 +85,27 @@ export default function (userOptions?: Options) {
       });
       site.filter("langName", (lang: string) => names.get(lang) || lang);
     }
+
+    // Alert plugin
+    site.hooks.addMarkdownItPlugin(alert)
+    
+    // Container plugin
+    site.hooks.addMarkdownItPlugin(container, {
+      name: "hint",
+      openRender: (tokens, index, _options) => {
+        const title = tokens[index].info.trim().match(/^hint\s+(.*)$/)[1] || "HINT"
+        return `<div class="callout callout-tip">\n<p class="callout-title">${title}</p>\n`;
+      },
+    })
+    site.hooks.addMarkdownItPlugin(container, {
+      name: "details",
+      openRender: (tokens, index, _options) => {
+        const title = tokens[index].info.trim().match(/^details\s+(.*)$/)[1] || "DETAILS"
+        return '<details><summary>' + title + '</summary>\n'
+      },
+      closeRender: (tokens, index, _options) => {
+        return '</details>'
+      },
+    })
   };
 }

@@ -1,19 +1,34 @@
 ---
 layout: layouts/landing.vto
-title: Home
+title: 
 description: description
 ---
 
-# petri.pro
+# home
 
-Du texte.
+## /now
 
-- title: {{ title }}
-- description: {{ description }}
-- draft: {{ draft }}
-- basename: {{ basename }}
-- url: {{ url }}
-- date: {{ date }}
+{{ include "./now.md" |> split('\n') |> slice(1) |> join('\n') }}
 
-> hello  
-> — source
+## /about
+
+{{ include "./about.md" |> split('\n') |> slice(1) |> join('\n') }}
+
+::: hint this is a title for the hint
+and here is the body of the note
+:::
+
+> [!note]
+> This is note text
+
+> [!important]
+> This is important text
+
+> [!tip]
+> This is tip text
+
+> [!warning]
+> This is warning text
+
+> [!caution]
+> This is caution text

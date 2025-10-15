@@ -8,16 +8,31 @@
 </head>
 <body>
 
-  <header class="stack">
+  <header>
+    <a href="/" class="site-name">{{ metas.site }}</a>
+    <nav aria-label="Navigation principale">
+      <!--<ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#now">En ce moment</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#writing">Écrits</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>-->
+    </nav>
   </header>
 
-  <main>
+  <main id="main">
 
-  {{ content }}
+    {{ content }}
 
   </main>
 
   <footer>
+    <p>© <span id="y"></span> {{ author }} — site personnel. Last update {{ date.toLocaleString() }} </p>
   </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

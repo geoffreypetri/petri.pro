@@ -1,0 +1,18 @@
+
+:root{
+  --font: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Mono", "Source Code Pro", "Fira Mono", "Droid Sans Mono", Consolas, "Courier New", monospace;
+  --text: #1f2328; 
+  --bg:#fff; 
+  --muted:#6b7280; 
+  --border:#e5e7eb; 
+  --link:#1f2328;
+  --max: 100%; /*72ch;*/
+}
+@media (prefers-color-scheme: dark){
+  :root { 
+    --text:#e5e7eb; 
+    --bg:#0b0f14; 
+    --muted:#9aa4b2; 
+    --border:#1f2937; 
+    --link:#1f2328; }
+}

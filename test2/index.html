@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Geoffrey Petri — Notes, projets, réflexions</title>
+  <meta name="description" content="Chef de projet & team lead web/IoT. Notes, projets, réflexions personnelles.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="/" class="site-name">Geoffrey Petri</a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#now">En ce moment</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#writing">Écrits</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Notes, projets & réflexions</h1>
+    <p class="lead">Chef de projet & manager d’une équipe web/TS dans le monde des objets connectés. J’explore des sujets d’ingénierie, de gouvernance ouverte, et de prise de notes (PKM).</p>
+
+    <blockquote class="manifeste">
+      « Creuser plutôt que confirmer. Clarifier plutôt que perfectionner. Structurer pour relier. Éclairer l’ombre. »
+    </blockquote>
+
+    <section id="about">
+      <h2>À propos</h2>
+      <p>Ingénieur/PO, 15+ ans d’expérience (web/IoT). Team lead d’une équipe full-stack. Président d’une association d’arts martiaux. J’aime transformer les idées en systèmes simples et durables.</p>
+      <ul>
+        <li>Tech : TypeScript/Node, Deno, Angular/Nest, SQLite, CI/CD.</li>
+        <li>Intérêts : PKM/Obsidian, RFCs personnelles (Pop), gouvernance ouverte, endurance.</li>
+      </ul>
+    </section>
+
+    <section id="now">
+      <h2>En ce moment</h2>
+      <ul>
+        <li>🧪 Outil CLI (Deno) pour créer/naviguer des notes (#parent/child, YAML, SQLite).</li>
+        <li>🧭 RFC-2 : structure & roadmap de mon système Pop.</li>
+        <li>🔒 R&D : mDNS + TLS “zero-config” pour devices IoT.</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projets</h2>
+      <ul>
+        <li><strong>Pop</strong> — Système de notes (RFCs, docs, spaces, inbox). Objectif : capter, relier, transmettre.</li>
+        <li><strong>Site association</strong> — VitePress + charte graphique + docs publiques (gouvernance ouverte).</li>
+        <li><strong>Inventaire matériel</strong> — app interne (admin, ingénieurs, qualité) avec traçabilité et ISO.</li>
+      </ul>
+      <p class="hint">→ À terme : pages dédiées /projects/…</p>
+    </section>
+
+    <section id="writing">
+      <h2>Écrits</h2>
+      <ul>
+        <li>La réunion magique n’existe pas — typologie & hygiène des réunions.</li>
+        <li>La distance qui libère — journal de pensée.</li>
+        <li>Transparence & confiance — gouvernance ouverte pour une asso.</li>
+      </ul>
+      <p class="hint">→ À terme : /blog/ et /docs/ pour notes & articles.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Me contacter : <a href="mailto:prenom.nom@example.com">prenom.nom@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="y"></span> Geoffrey Petri — site personnel. Sobre et sans tracking.</small>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
