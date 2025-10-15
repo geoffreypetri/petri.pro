@@ -28,7 +28,7 @@
   </main>
 
   <footer>
-    <p>© <span id="y"></span> {{ author }} — site personnel. Last update {{ date.toLocaleString() }} </p>
+    <p>© <span id="y"></span> {{ author }} — Last updated {{ date.toISOString().slice(0,10) }}</p>
   </footer>
 
   <script>

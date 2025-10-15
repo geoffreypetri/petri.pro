@@ -9,10 +9,11 @@
   --max: 100%; /*72ch;*/
 }
 @media (prefers-color-scheme: dark){
-  :root { 
-    --text:#e5e7eb; 
-    --bg:#0b0f14; 
-    --muted:#9aa4b2; 
-    --border:#1f2937; 
-    --link:#1f2328; }
+:root { 
+  --text:#e5e7eb; 
+  --bg:#0b0f14; 
+  --muted:#9aa4b2; 
+  --border:#1f2937; 
+  --link:#e5e7eb; 
+}
 }

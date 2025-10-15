@@ -99,6 +99,7 @@ footer > p {
   color:var(--muted); 
 }
 footer::before {
-  content: "---"
+  content: "___";
+  color:var(--muted); 
 }
 :focus-visible{ outline:2px solid var(--link); outline-offset:2px; }
