@@ -5,4 +5,5 @@ draft: false
 
 # /about
 
-Contact
+- [Email](mailto:g@petri.pro)
+- [GitHub](https://github.com/geoffreypetri)
