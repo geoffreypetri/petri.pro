@@ -1,0 +1,412 @@
+{
+  "entries": [
+    {
+      "label": "Angular (LTS)",
+      "quadrant": 0,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/angular-lts"
+    },
+    {
+      "label": "Angular Material",
+      "quadrant": 0,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/angular-material"
+    },
+    {
+      "label": "NestJS",
+      "quadrant": 0,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/nestjs"
+    },
+    {
+      "label": "Node.js (LTS)",
+      "quadrant": 0,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/node-js-lts"
+    },
+    {
+      "label": "RxJS",
+      "quadrant": 0,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/rxjs"
+    },
+    {
+      "label": "TypeScript",
+      "quadrant": 0,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/typescript"
+    },
+    {
+      "label": "Vite",
+      "quadrant": 0,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/vite"
+    },
+    {
+      "label": "Deno (runtime)",
+      "quadrant": 0,
+      "ring": 1,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/deno-runtime"
+    },
+    {
+      "label": "tRPC",
+      "quadrant": 0,
+      "ring": 1,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/trpc"
+    },
+    {
+      "label": "GraphQL",
+      "quadrant": 0,
+      "ring": 2,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/graphql"
+    },
+    {
+      "label": "Web Components / Lit",
+      "quadrant": 0,
+      "ring": 2,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/web-components-lit"
+    },
+    {
+      "label": "jQuery (nouveaux projets)",
+      "quadrant": 0,
+      "ring": 3,
+      "active": false,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/jquery-nouveaux-projets"
+    },
+    {
+      "label": "Moment.js",
+      "quadrant": 0,
+      "ring": 3,
+      "active": false,
+      "moved": 0,
+      "link": "./docs/radar/languages-frameworks/moment-js"
+    },
+    {
+      "label": "AWS / Azure / GCP (PaaS cœur)",
+      "quadrant": 1,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/aws-azure-gcp-paas-c-ur"
+    },
+    {
+      "label": "Docker",
+      "quadrant": 1,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/docker"
+    },
+    {
+      "label": "GitHub Actions",
+      "quadrant": 1,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/github-actions"
+    },
+    {
+      "label": "MQTT brokers (Mosquitto/EMQX)",
+      "quadrant": 1,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/mqtt-brokers-mosquitto-emqx"
+    },
+    {
+      "label": "PostgreSQL",
+      "quadrant": 1,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/postgresql"
+    },
+    {
+      "label": "Redis (cache/queue)",
+      "quadrant": 1,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/redis-cache-queue"
+    },
+    {
+      "label": "SQLite",
+      "quadrant": 1,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/sqlite"
+    },
+    {
+      "label": "Cloudflare Workers / Pages",
+      "quadrant": 1,
+      "ring": 1,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/cloudflare-workers-pages"
+    },
+    {
+      "label": "Kubernetes",
+      "quadrant": 1,
+      "ring": 1,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/kubernetes"
+    },
+    {
+      "label": "NATS",
+      "quadrant": 1,
+      "ring": 2,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/nats"
+    },
+    {
+      "label": "TimescaleDB / InfluxDB",
+      "quadrant": 1,
+      "ring": 2,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/platforms/timescaledb-influxdb"
+    },
+    {
+      "label": "ESLint",
+      "quadrant": 2,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/eslint"
+    },
+    {
+      "label": "Nx (monorepo)",
+      "quadrant": 2,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/nx-monorepo"
+    },
+    {
+      "label": "OpenAPI (Swagger)",
+      "quadrant": 2,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/openapi-swagger"
+    },
+    {
+      "label": "OpenTelemetry",
+      "quadrant": 2,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/opentelemetry"
+    },
+    {
+      "label": "Playwright",
+      "quadrant": 2,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/playwright"
+    },
+    {
+      "label": "pnpm",
+      "quadrant": 2,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/pnpm"
+    },
+    {
+      "label": "Prettier",
+      "quadrant": 2,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/prettier"
+    },
+    {
+      "label": "Snyk / Dependabot",
+      "quadrant": 2,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/snyk-dependabot"
+    },
+    {
+      "label": "Terraform",
+      "quadrant": 2,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/terraform"
+    },
+    {
+      "label": "Vitest",
+      "quadrant": 2,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/vitest"
+    },
+    {
+      "label": "Keycloak (OIDC/OAuth2)",
+      "quadrant": 2,
+      "ring": 1,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/keycloak-oidc-oauth2"
+    },
+    {
+      "label": "tsoa / class-validator / class-transformer",
+      "quadrant": 2,
+      "ring": 1,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/tsoa-class-validator-class-transformer"
+    },
+    {
+      "label": "Ansible",
+      "quadrant": 2,
+      "ring": 2,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/ansible"
+    },
+    {
+      "label": "Biome (lint+format)",
+      "quadrant": 2,
+      "ring": 2,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/tools/biome-lint-format"
+    },
+    {
+      "label": "Jest (legacy)",
+      "quadrant": 2,
+      "ring": 3,
+      "active": false,
+      "moved": 0,
+      "link": "./docs/radar/tools/jest-legacy"
+    },
+    {
+      "label": "API-first & Contract Testing",
+      "quadrant": 3,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/api-first-contract-testing"
+    },
+    {
+      "label": "Domain-Driven Design (DDD)",
+      "quadrant": 3,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/domain-driven-design-ddd"
+    },
+    {
+      "label": "Feature flags & progressive delivery",
+      "quadrant": 3,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/feature-flags-progressive-delivery"
+    },
+    {
+      "label": "Hexagonal / Clean Architecture",
+      "quadrant": 3,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/hexagonal-clean-architecture"
+    },
+    {
+      "label": "MQTT-first pour IoT terrain",
+      "quadrant": 3,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/mqtt-first-pour-iot-terrain"
+    },
+    {
+      "label": "Observability by default",
+      "quadrant": 3,
+      "ring": 0,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/observability-by-default"
+    },
+    {
+      "label": "Edge computing (Workers/Deno Deploy)",
+      "quadrant": 3,
+      "ring": 1,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/edge-computing-workers-deno-deploy"
+    },
+    {
+      "label": "Local-first / Offline-first",
+      "quadrant": 3,
+      "ring": 1,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/local-first-offline-first"
+    },
+    {
+      "label": "Serverless (Functions, Queues, Events)",
+      "quadrant": 3,
+      "ring": 1,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/serverless-functions-queues-events"
+    },
+    {
+      "label": "Temporal API (ECMAScript) pour dates",
+      "quadrant": 3,
+      "ring": 1,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/temporal-api-ecmascript-pour-dates"
+    },
+    {
+      "label": "GenAI copilots (OpenAI, local LLM)",
+      "quadrant": 3,
+      "ring": 2,
+      "active": true,
+      "moved": 0,
+      "link": "./docs/radar/techniques/genai-copilots-openai-local-llm"
+    },
+    {
+      "label": "Bower / TSLint / Gulp (build)",
+      "quadrant": 3,
+      "ring": 3,
+      "active": false,
+      "moved": 0,
+      "link": "./docs/radar/techniques/bower-tslint-gulp-build"
+    }
+  ]
+}

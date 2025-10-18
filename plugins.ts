@@ -63,9 +63,8 @@ export default function (userOptions?: Options) {
       .use(sitemap(options.sitemap))
       .use(favicon(options.favicon))
       .add("uploads")
-      .add("nice.css")
-      .add("simple.css")
-      .add("monospace.css");
+      .add("monospace.css")
+      .add("tech-radar")
 
     // Multilanguage site
     if (options.languages?.length) {
