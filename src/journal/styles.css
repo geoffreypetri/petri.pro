@@ -1,0 +1,260 @@
+:root {
+  --color-bg: #f5f5f5;
+  --color-text: #111827;
+  --color-text-muted: #6b7280;
+  --color-border: #d1d5db;
+  --color-border-strong: #9ca3af;
+  --color-row-hover: #e5e7eb;
+
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+}
+
+/* Reset léger */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-4) var(--space-6);
+}
+
+.app-header {
+  margin-bottom: var(--space-3);
+}
+
+.app-title {
+  margin: 0 0 var(--space-1);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Journal */
+.journal {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Ligne d'édition (création ou édition) */
+.journal-form {
+  margin: 0;
+}
+
+.journal-row {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Champ principal / champ d'édition – base commune */
+.journal-input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-2) 2.4rem var(--space-2) 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  resize: none;
+  min-height: 1.8rem;
+}
+
+.journal-input:focus {
+  outline: none;
+  border-bottom-color: #111827;
+}
+
+.journal-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Champ d’édition : même base, mais sans espace pour une flèche */
+.entry-edit-input {
+  padding-right: 0;
+  border-bottom-color: var(--color-border-strong);
+  min-height: 0; /* permet de caler exactement sur la hauteur existante */
+}
+
+/* Bouton flèche intégré – création uniquement */
+.journal-send {
+  position: absolute;
+  right: 0;
+  bottom: 0.2rem;
+  border: none;
+  padding: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+}
+
+/* La flèche n’apparaît que lorsque le champ de création est focus */
+.journal-row:focus-within .journal-send {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.journal-send:hover {
+  background: #d1d5db;
+  color: #111827;
+}
+
+/* Meta (statut + export) */
+.journal-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.form-status {
+  min-height: 1.1rem;
+}
+
+.button-link {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: var(--color-text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.button-link:hover {
+  color: var(--color-text);
+}
+
+/* Entrées */
+.entries-section {
+  margin-top: var(--space-3);
+}
+
+.entries-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: 0.95rem;
+}
+
+/* Groupe par jour */
+.day-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.day-group-header {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+.day-group-title {
+  font-weight: 500;
+}
+
+.day-group-meta {
+  font-size: 0.8rem;
+}
+
+/* Liste d’entrées */
+.entry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.entry-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--space-2);
+  padding: var(--space-1) var(--space-1);
+  border-bottom: 1px solid rgba(209, 213, 219, 0.4);
+  transition: background-color 0.08s ease;
+}
+
+/* Survol : fond discret + action possible */
+.entry-item:hover {
+  background-color: var(--color-row-hover);
+}
+
+.entry-item:last-child {
+  border-bottom: none;
+}
+
+.entry-time {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  padding-top: 0.1rem;
+}
+
+/* Texte affiché (mode lecture) */
+.entry-content {
+  margin: 0;
+  cursor: pointer;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Wrapper d’édition inline – on réutilise .journal-row */
+.entry-edit-row {
+  /* sémantique uniquement */
+}
+
+/* État vide */
+.entries-empty {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .app {
+    padding-inline: var(--space-3);
+  }
+
+  .entry-item {
+    grid-template-columns: minmax(3.5rem, auto) 1fr;
+  }
+}

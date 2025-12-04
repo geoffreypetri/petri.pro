@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Journal – What's on my mind?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1 class="app-title">Journal</h1>
+    </header>
+
+    <section class="journal">
+      <form id="entry-form" class="journal-form" autocomplete="off">
+        <div class="journal-row">
+          <textarea
+            id="thought"
+            name="thought"
+            class="journal-input"
+            rows="1"
+            placeholder=". . .  .   .     .        .             ."
+            required
+          ></textarea>
+          <button
+            type="submit"
+            class="journal-send"
+            aria-label="Envoyer la note"
+          >
+            ➤
+          </button>
+        </div>
+      </form>
+
+      <div class="journal-meta">
+        <span id="form-status" class="form-status" aria-live="polite"></span>
+        <button type="button" id="export-btn" class="button-link">
+          Exporter en Markdown
+        </button>
+      </div>
+
+      <section class="entries-section">
+        <div id="entries-container" class="entries-container">
+          <!-- entrées rendues ici -->
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
