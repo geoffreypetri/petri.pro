@@ -63,6 +63,7 @@ export default function (userOptions?: Options) {
       .use(sitemap(options.sitemap))
       .use(favicon(options.favicon))
       .add("uploads")
+      .add("journal")
       .add("monospace.css")
       .add("tech-radar")
 
